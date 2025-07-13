@@ -17,8 +17,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         member = await context.bot.get_chat_member(CHANNEL_ID, user_id)
         if member.status in ("member", "administrator", "creator"):
             await update.message.reply_text(
-                f"Welcome to the Eminiq Network where data science dismantles guesswork.\n
-In sixty seconds, our Revenue-Leak Scanner transforms an ordinary OnlyFans CSV into a forensic audit of churn velocity, whale concentration, and content inefficiency. Expect machine-graded insights, not motivational fluff, and a two-page PDF directors can hand straight to finance. Join the channel, drop a file, and watch the blind spots illuminate—before your next post goes live.\n{APP_LINK}"
+                f"Welcome to the Eminiq Network—where data science dismantles guesswork. In sixty seconds, our Revenue-Leak Scanner transforms an ordinary OnlyFans CSV into a forensic audit of churn velocity, whale concentration, and content inefficiency. Expect machine-graded insights, not motivational fluff, and a two-page PDF directors can hand straight to finance. Join the channel, drop a file, and watch the blind spots illuminate—before your next post goes live.\n{APP_LINK}"
             )
         else:
             await update.message.reply_text(
